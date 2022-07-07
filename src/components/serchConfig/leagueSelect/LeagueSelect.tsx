@@ -8,11 +8,18 @@ function LeagueSelect() {
   const leagueList = useAppSelector((state) => state.leagueListReducer.leagueList);
   const dispatch = useAppDispatch();
 
+  const setSelectedLeague = selectedLeagueSlice.actions.setValue;
+
   useEffect(function () {
     dispatch(fetchLeagues());
   }, []);
 
-  const setSelectedLeague = selectedLeagueSlice.actions.setValue;
+  useEffect(
+    function () {
+      if (leagueList.length) dispatch(setSelectedLeague(leagueList[0].id));
+    },
+    [leagueList]
+  );
 
   function selectChangeHandler(event: React.ChangeEvent<HTMLSelectElement>) {
     dispatch(setSelectedLeague(event.target.value));
