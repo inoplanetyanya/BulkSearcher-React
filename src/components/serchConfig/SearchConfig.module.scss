@@ -1,0 +1,11 @@
+.SearchConfig {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.SearchConfig > * {
+  margin: 0 10px;
+}

@@ -1,0 +1,19 @@
+.SearchButton {
+  -webkit-user-select: none;
+
+  .SearchButton__button {
+    color: #ffffff;
+    width: 95px;
+    height: 34px;
+    background-color: #0e0e0e;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 2px #ffffff;
+    margin: 0 10px;
+  }
+
+  .SearchButton__button:hover {
+    box-shadow: 0 0 4px #ffffff;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,27 @@
+@import "/src/colors.scss";
+@font-face {
+  font-family: "Lato Regular";
+  src: url(./assets/fonts/Lato-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 20px "Lato Regular"
+}
+
+.App {
+
+}
+
+body {
+  background-color: $darkGrey;
+  display: inline-block;
+  width: max(100%, 1240px);
+  min-width: 420px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

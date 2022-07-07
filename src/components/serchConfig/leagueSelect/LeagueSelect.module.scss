@@ -1,0 +1,11 @@
+.LeagueSelect {
+  -webkit-user-select: none;
+
+  .LeagueSelect__select {
+    min-width: 200px;
+  }
+
+  .LeagueSelect__select:focus {
+    outline: none;
+  }
+}

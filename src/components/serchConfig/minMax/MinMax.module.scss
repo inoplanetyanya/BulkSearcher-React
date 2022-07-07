@@ -1,0 +1,48 @@
+@import "/src/colors.scss";
+
+.MinMax {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  justify-items: end;
+  width: 245px;
+  -webkit-user-select: none;
+
+  .MinMax__label {
+    margin: 0 10px;
+    color: #ffffff;
+    -webkit-user-select: none;
+  }
+
+  .MinMax__inputsContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .MinMax__input {
+    display: inline-block;
+    float: left;
+    color: #ffffff;
+    border: 1px solid $darkRed;
+    background-color: $darkGrey;
+    text-align: center;
+    line-height: 34px;
+    width: 90px;
+  }
+
+  .MinMax__input:first-child {
+    border-radius: 6px 0 0 6px;
+    border-right: 1px solid $darkRed;
+  }
+
+  .MinMax__input:last-child {
+    border-radius: 0 6px 6px 0;
+    border-right: 1px solid $darkRed;
+  }
+
+  .MinMax__input:focus {
+    outline: none;
+  }
+}

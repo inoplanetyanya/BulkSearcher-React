@@ -1,0 +1,19 @@
+@import "/src/colors.scss";
+
+.Header {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: $grey;
+  -webkit-user-select: none;
+
+  .Header__title {
+    white-space: nowrap;
+    margin: 0 10px;
+    color: #fff;
+  }
+}
