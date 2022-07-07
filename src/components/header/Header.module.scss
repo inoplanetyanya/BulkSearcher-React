@@ -9,7 +9,7 @@
   width: 100%;
   padding: 10px;
   background-color: $grey;
-  -webkit-user-select: none;
+  user-select: none;
 
   .Header__title {
     white-space: nowrap;

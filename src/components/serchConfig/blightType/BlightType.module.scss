@@ -2,7 +2,7 @@
 
 .BlightType {
   display: flex;
-  -webkit-user-select: none;
+  user-select: none;
 
   .BlightType__radioGroup {
     display: flex;
