@@ -1,0 +1,61 @@
+@import "/src/colors.scss";
+
+.LotMap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 10px;
+
+  .LotMap__mapInfo {
+    display: grid;
+    grid-template-columns: 20px 180px 50px 60px 45px 15px 35px 60px;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .LotMap__mapCheckBox {
+    position: relative;
+    top: -2px;
+    margin: 0 10px;
+  }
+
+  .LotMap__mapCheckBox::after {
+    height: 18px;
+    width: 18px;
+    border-radius: 9px;
+    background-color: $darkGrey;
+    content: "";
+    border: 2px solid $darkRed;
+    display: inline-block;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    left: -3px;
+    top: -2px;
+  }
+
+  .LotMap__mapCheckBox:checked::after {
+    background-color: $darkRed;
+  }
+
+
+  .LotMap__buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .LotMap__button {
+      width: 28px;
+      height: 28px;
+      text-align: center;
+      border: 2px solid $darkRed;
+      background-color: $darkGrey;
+      color: #fff;
+      border-radius: 9px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+}

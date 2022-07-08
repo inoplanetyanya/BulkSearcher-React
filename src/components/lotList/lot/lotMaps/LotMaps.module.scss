@@ -1,0 +1,10 @@
+.LotMaps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  .LotMaps__label {
+    margin-top: 10px;
+    width: 110px;
+  }
+}

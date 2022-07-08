@@ -1,0 +1,68 @@
+@import "/src/colors.scss";
+
+.Lot {
+  border: 2px solid $darkRed;
+  background-color: $grey;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 6px;
+  user-select: none;
+
+  .Lot__seller {
+    display: grid;
+    grid-template-areas:
+      "A B"
+      "C D";
+    grid-template-columns: 120px auto;
+    margin-bottom: 20px;
+
+    .Lot__sellerLabelCharacter {
+      grid-area: A;
+    }
+
+    .Lot__sellerLabelAccount {
+      grid-area: C;
+    }
+
+    .Lot__sellerCharacter {
+      grid-area: B;
+      user-select: text;
+    }
+
+    .Lot__sellerAccount {
+      grid-area: D;
+      user-select: text;
+    }
+  }
+
+  .Lot__textArea {
+    margin: 20px 0;
+    width: 100%;
+    color: #ffffff;
+    border: 1px solid $darkRed;
+    background-color: $darkGrey;
+    border-radius: 6px;
+    padding: 10px;
+    height: 100px;
+    resize: none;
+  }
+
+  .Lot__textArea::-webkit-scrollbar {
+    display: none;
+  }
+
+  .Lot__textArea:focus {
+    outline: none;
+  }
+
+  .Lot__copyMessage {
+    width: 186px;
+    height: 34px;
+    color: #ffffff;
+    border: 1px solid $darkRed;
+    background-color: $darkGrey;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+  }
+}
