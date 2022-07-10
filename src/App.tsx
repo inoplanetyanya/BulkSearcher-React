@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <LotList lotList={lotList.filter((el) => el.totalMaps >= (minStock ? minStock : 0))} />
+      <LotList lotList={ minStock !== undefined && minStock > 1 ? lotList.filter((el) => el.totalMaps >= minStock) : lotList} />
       {searching && <SearchingPlaceholder />}
     </div>
   );
