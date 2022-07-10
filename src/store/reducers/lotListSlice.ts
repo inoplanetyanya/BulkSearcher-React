@@ -62,15 +62,15 @@ export const lotListSlice = createSlice({
 
         let averagePrice = totalPrice / totalMaps;
 
-        if (averagePrice) state.lots.push({ sellerCharacter, sellerAccount, maps, averagePrice, message, clicked });
+        if (averagePrice) state.lots.push({ sellerCharacter, sellerAccount, maps, averagePrice, message, clicked, totalMaps });
         return true;
       });
 
       state.lots.sort(function (a, b) {
-        if (a.averagePrice < b.averagePrice) {
+        if (a.averagePrice > b.averagePrice) {
           return 1;
         }
-        if (a.averagePrice > b.averagePrice) {
+        if (a.averagePrice < b.averagePrice) {
           return -1;
         }
         return 0;
