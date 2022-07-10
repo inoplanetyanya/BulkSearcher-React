@@ -7,12 +7,21 @@
   align-items: center;
   margin: 10px;
 
+  .LotMap__unpicked {
+    color: $darkRed;
+  }
+
   .LotMap__mapInfo {
     display: grid;
-    grid-template-columns: 20px 180px 50px 60px 45px 15px 35px 60px;
+    grid-template-columns: 20px 80px 180px 60px 60px 40px 15px 35px 80px;
+    grid-gap: 10px;
     align-content: center;
     justify-items: center;
     align-items: center;
+  }
+
+  .LotMap__mapIcon {
+    height: 34px;
   }
 
   .LotMap__mapCheckBox {
@@ -33,13 +42,12 @@
     appearance: none;
     position: relative;
     left: -3px;
-    top: -2px;
+    top: -4px;
   }
 
   .LotMap__mapCheckBox:checked::after {
     background-color: $darkRed;
   }
-
 
   .LotMap__buttons {
     display: flex;

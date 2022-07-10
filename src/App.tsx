@@ -1,13 +1,20 @@
-import React from "react";
 import "./App.scss";
 import Header from "./components/header/Header";
+import LotList from "./components/lotList/LotList";
+import SearchingPlaceholder from "./components/searchingPlaceholder/SearchingPlaceholder";
+import { useAppSelector } from "./hooks/redux";
 
 function App() {
+  const lotList = useAppSelector((state) => state.lotListReducer.lots);
+  const searching = useAppSelector((state) => state.searchingReducer.searching);
+
   return (
-  <div className="App">
-    <Header/>
-  </div>
-  )
+    <div className="App">
+      <Header />
+      <LotList lotList={lotList} />
+      {searching && <SearchingPlaceholder />}
+    </div>
+  );
 }
 
 export default App;

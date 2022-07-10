@@ -11,10 +11,14 @@
   .Lot__seller {
     display: grid;
     grid-template-areas:
-      "A B"
-      "C D";
-    grid-template-columns: 120px auto;
+      "E A B"
+      "E C D";
+    grid-template-columns: 120px 120px auto;
     margin-bottom: 20px;
+
+    .Lot__Lot__sellerLabel {
+      grid-area: "E";
+    }
 
     .Lot__sellerLabelCharacter {
       grid-area: A;
@@ -33,6 +37,12 @@
       grid-area: D;
       user-select: text;
     }
+  }
+
+  .Lot__avgPrice {
+    display: grid;
+    grid-template-columns: 120px auto;
+    margin-bottom: 20px;
   }
 
   .Lot__textArea {
@@ -64,5 +74,9 @@
     border-radius: 6px;
     text-align: center;
     cursor: pointer;
+  }
+
+  .Lot__clicked {
+    background-color: $darkRed;
   }
 }

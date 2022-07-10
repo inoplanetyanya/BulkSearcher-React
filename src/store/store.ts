@@ -4,13 +4,17 @@ import priceRangeReducer from "./reducers/priceRangeSlice";
 import leagueListReducer from "./reducers/leagueListSlice";
 import selectedLeagueReducer from "./reducers/selectedLeagueSlice";
 import blightTypeReducer from "./reducers/blightTypeSlice";
+import searchingReducer from "./reducers/searchingSlice";
+import lotListReducer from "./reducers/lotListSlice";
 
 const rootReducer = combineReducers({
   tierRangeReducer,
   priceRangeReducer,
   leagueListReducer,
   selectedLeagueReducer,
-  blightTypeReducer
+  blightTypeReducer,
+  searchingReducer,
+  lotListReducer,
 });
 
 export function setupStore() {

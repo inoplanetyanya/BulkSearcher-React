@@ -4,4 +4,5 @@ export interface IMap {
   price: number;
   count: number;
   pickedCount: number;
+  iconURL: string;
 }
