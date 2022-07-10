@@ -1,0 +1,25 @@
+@import "/src/colors.scss";
+
+.MinStock {
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  justify-items: end;
+
+  .MinStock__label {
+    margin: 0 10px;
+  }
+
+  .MinStock__input {
+    color: #fff;
+    border-radius: 6px;
+    border: 1px solid $darkRed;
+    background-color: $darkGrey;
+    text-align: center;
+    line-height: 34px;
+    width: 90px;
+    outline: none;
+  }
+}

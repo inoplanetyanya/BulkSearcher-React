@@ -5,6 +5,7 @@ import { tierRangeSlice } from "../../store/reducers/tierRangeSlice";
 import BlightType from "./blightType/BlightType";
 import LeagueSelect from "./leagueSelect/LeagueSelect";
 import MinMax from "./minMax/MinMax";
+import MinStock from "./minStock/MinStock";
 import classes from "./SearchConfig.module.scss";
 
 function SearchConfig() {
@@ -22,6 +23,7 @@ function SearchConfig() {
       <BlightType />
       <MinMax label={"Tier"} range={tierRange} setValue={setTierRange} sortValues={sortTiers} />
       <MinMax label={"Price"} range={priceRange} setValue={setPriceRange} sortValues={sortPrices} />
+      <MinStock />
     </div>
   );
 }
