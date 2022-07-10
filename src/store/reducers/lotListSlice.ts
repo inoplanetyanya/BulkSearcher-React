@@ -65,6 +65,16 @@ export const lotListSlice = createSlice({
         if (averagePrice) state.lots.push({ sellerCharacter, sellerAccount, maps, averagePrice, message, clicked });
         return true;
       });
+
+      state.lots.sort(function (a, b) {
+        if (a.averagePrice < b.averagePrice) {
+          return 1;
+        }
+        if (a.averagePrice > b.averagePrice) {
+          return -1;
+        }
+        return 0;
+      });
     },
     mapMinus(state: LotListState, action: PayloadAction<{ sellerCharacter: string; map: IMap }>) {
       const sellerCharacter = action.payload.sellerCharacter;
