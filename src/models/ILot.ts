@@ -7,4 +7,5 @@ export interface ILot {
   averagePrice: number,
   message: string;
   clicked: boolean;
+  totalMaps: number;
 }
