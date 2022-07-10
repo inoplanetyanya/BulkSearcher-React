@@ -2,12 +2,12 @@
 
 ## Download
 
-[Download portable for win 10]()
+[Download portable for win 10](https://github.com/inoplanetyanya/BulkSearcher-React/releases/download/v1.0.1/BulkSearcher_v1.0.1.exe)
 
 ## About
 
 It's a tool for searching blighted maps.  
-[Showcase](https://youtu.be/LPI1UwKjBME)  
+[Showcase (old version)](https://youtu.be/LPI1UwKjBME)  
 
 ## Build it
 
