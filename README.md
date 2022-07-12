@@ -2,7 +2,7 @@
 
 ## Download
 
-[Download portable for win 10](https://github.com/inoplanetyanya/BulkSearcher-React/releases/download/v1.0.1/BulkSearcher_v1.0.1.exe)
+[Download portable for win 10](https://github.com/inoplanetyanya/BulkSearcher-React/releases/download/v1.0.2/BulkSearcher_v1.0.2.exe)
 
 ## About
 
