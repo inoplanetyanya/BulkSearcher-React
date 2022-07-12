@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { selectedLeagueSlice } from "../../../store/reducers/selectedLeagueSlice";
 import { fetchLeagues } from "../actions/fetchLeagues";
 import classes from "./LeagueSelect.module.scss";
 
-function LeagueSelect() {
+const LeagueSelect = memo(() => {
   const leagueList = useAppSelector((state) => state.leagueListReducer.leagueList);
   const dispatch = useAppDispatch();
 
@@ -36,6 +36,6 @@ function LeagueSelect() {
       </select>
     </div>
   );
-}
+});
 
 export default LeagueSelect;

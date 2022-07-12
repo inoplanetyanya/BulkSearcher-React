@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect, useMemo } from "react";
 import { useAppDispatch } from "../../../hooks/redux";
 import { ILot } from "../../../models/ILot";
 import { lotListSlice } from "../../../store/reducers/lotListSlice";
 import classes from "./Lot.module.scss";
 import LotMaps from "./lotMaps/LotMaps";
 
-function Lot({ lot }: { lot: ILot }) {
+const Lot = memo(({ lot }: { lot: ILot }) => {
   const setClicked = lotListSlice.actions.setCicked;
   const setMessage = lotListSlice.actions.setMessage;
   const dispatch = useAppDispatch();
@@ -103,6 +103,6 @@ function Lot({ lot }: { lot: ILot }) {
       />
     </div>
   );
-}
+});
 
 export default Lot;

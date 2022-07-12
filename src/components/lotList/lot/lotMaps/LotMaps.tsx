@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { IMap } from "../../../../models/IMap";
 import LotMap from "./lotMap/LotMap";
 import classes from "./LotMaps.module.scss";
 
-function LotMaps({ maps, sellerCharacter }: { maps: IMap[]; sellerCharacter: string }) {
+const LotMaps = memo(({ maps, sellerCharacter }: { maps: IMap[]; sellerCharacter: string }) => {
   return (
     <div className={classes.LotMaps}>
       <p className={classes.LotMaps__label}>Maps</p>
@@ -14,6 +14,6 @@ function LotMaps({ maps, sellerCharacter }: { maps: IMap[]; sellerCharacter: str
       </div>
     </div>
   );
-}
+});
 
 export default LotMaps;

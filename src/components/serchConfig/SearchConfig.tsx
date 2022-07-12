@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { useAppSelector } from "../../hooks/redux";
 import { priceRangeSlice } from "../../store/reducers/priceRangeSlice";
 import { tierRangeSlice } from "../../store/reducers/tierRangeSlice";
@@ -8,7 +8,7 @@ import MinMax from "./minMax/MinMax";
 import MinStock from "./minStock/MinStock";
 import classes from "./SearchConfig.module.scss";
 
-function SearchConfig() {
+const SearchConfig = memo(() => {
   const tierRange = useAppSelector((state) => state.tierRangeReducer.tierRange);
   const setTierRange = tierRangeSlice.actions.setValue;
   const sortTiers = tierRangeSlice.actions.sortValues;
@@ -26,6 +26,6 @@ function SearchConfig() {
       <MinStock />
     </div>
   );
-}
+});
 
 export default SearchConfig;

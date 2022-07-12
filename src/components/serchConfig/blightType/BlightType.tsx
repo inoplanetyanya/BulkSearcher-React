@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { useAppDispatch } from "../../../hooks/redux";
 import { blightTypeSlice } from "../../../store/reducers/blightTypeSlice";
 import classes from "./BlightType.module.scss";
 
-function BlightType() {
+const BlightType = memo(() => {
   const setBlightType = blightTypeSlice.actions.setValue;
   const dispatch = useAppDispatch();
 
@@ -26,6 +26,6 @@ function BlightType() {
       </div>
     </div>
   );
-}
+});
 
 export default BlightType;

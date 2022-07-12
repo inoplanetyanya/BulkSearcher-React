@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { useAppSelector } from "../../hooks/redux";
 import classes from "./SearchingPlaceholder.module.scss";
 
-function SearchingPlaceholder() {
+const SearchingPlaceholder = memo(() => {
   const [ellipsis, setEllipsis] = useState("");
 
   useEffect(() => {
@@ -47,6 +47,6 @@ function SearchingPlaceholder() {
       </div>
     </div>
   );
-}
+});
 
 export default SearchingPlaceholder;

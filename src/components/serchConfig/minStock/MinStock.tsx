@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { minStockSlice } from "../../../store/reducers/minStockSlice";
 import classes from "./MinStock.module.scss";
 
-function MinStock() {
-  const minStock = useAppSelector(state => state.minStockReducer.minStock);
+const MinStock = memo(() => {
+  const minStock = useAppSelector((state) => state.minStockReducer.minStock);
   const setMinStock = minStockSlice.actions.setValue;
   const dispatch = useAppDispatch();
 
@@ -18,6 +18,6 @@ function MinStock() {
       <input className={classes.MinStock__input} value={minStock} onChange={inputHandler} placeholder={"Min"} type="text" name="minStock" id="minStock" />
     </div>
   );
-}
+});
 
 export default MinStock;

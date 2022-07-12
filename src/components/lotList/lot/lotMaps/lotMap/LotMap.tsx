@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import { useAppDispatch } from "../../../../../hooks/redux";
 import { IMap } from "../../../../../models/IMap";
 import { lotListSlice } from "../../../../../store/reducers/lotListSlice";
 import classes from "./LotMap.module.scss";
 
-function LotMap({ map, sellerCharacter }: { map: IMap; sellerCharacter: string }) {
+const LotMap = memo(({ map, sellerCharacter }: { map: IMap; sellerCharacter: string }) => {
   const mapName = map.name.replace("Blighted ", "").replace("Blight-ravaged ", "").replace(" Map", "");
 
   const minusMap = lotListSlice.actions.mapMinus;
@@ -44,6 +44,6 @@ function LotMap({ map, sellerCharacter }: { map: IMap; sellerCharacter: string }
       </div>
     </div>
   );
-}
+});
 
 export default LotMap;

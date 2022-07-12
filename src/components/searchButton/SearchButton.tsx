@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import { fetchMaps } from "../../actions/fetchMaps";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { searchingSlice } from "../../store/reducers/searchingSlice";
 
 import classes from "./SearchButton.module.scss";
 
-function SearchButton() {
+const SearchButton = memo(() => {
   const dispatch = useAppDispatch();
 
   const league = useAppSelector((state) => state.selectedLeagueReducer.selectedLeague);
@@ -19,8 +19,8 @@ function SearchButton() {
     league,
     blightType,
     tierRange,
-    priceRange
-  }
+    priceRange,
+  };
 
   function clickHandler(event: React.MouseEvent<HTMLElement>) {
     dispatch(fetchMaps(searchConfig));
@@ -34,6 +34,6 @@ function SearchButton() {
       </button>
     </div>
   );
-}
+});
 
 export default SearchButton;
