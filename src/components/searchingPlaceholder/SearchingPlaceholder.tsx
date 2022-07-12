@@ -32,11 +32,18 @@ function SearchingPlaceholder() {
           <p>/</p>
           <p>{searchingStatus.tierProgress.max}</p>
         </div>
-        {searchingStatus.delay > 0 && (
-          <CountdownCircleTimer isPlaying duration={searchingStatus.delay} colors="#902020" trailColor="rgba(0, 0, 0, 0)">
-            {() => <span className={classes.spanDelay}>Delay</span>}
-          </CountdownCircleTimer>
-        )}
+        <div className={classes.timers}>
+          {searchingStatus.delayPOST > 0 && (
+            <CountdownCircleTimer isPlaying duration={searchingStatus.delayPOST} colors="#902020" trailColor="rgba(0, 0, 0, 0)">
+              {() => <span className={classes.spanDelay}>Delay</span>}
+            </CountdownCircleTimer>
+          )}
+          {searchingStatus.delayGET > 0 && (
+            <CountdownCircleTimer isPlaying duration={searchingStatus.delayGET} colors="#902020" trailColor="rgba(0, 0, 0, 0)">
+              {() => <span className={classes.spanDelay}>Delay</span>}
+            </CountdownCircleTimer>
+          )}
+        </div>
       </div>
     </div>
   );

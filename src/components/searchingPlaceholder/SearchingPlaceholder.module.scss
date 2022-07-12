@@ -44,8 +44,12 @@
       font-size: 30px;
     }
 
-    .spanDelay {
-      font-size: 30px;
+    .timers {
+      display: flex;
+      flex-wrap: nowrap;
+      .spanDelay {
+        font-size: 30px;
+      }
     }
   }
 }
